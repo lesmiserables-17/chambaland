@@ -31,7 +31,6 @@ class chambaraViewController: UIViewController {
                 }
 
                 self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
-                //self.timer?.fire()
                 
                 return
             },
@@ -40,6 +39,16 @@ class chambaraViewController: UIViewController {
                 print(self.bs?.user_id)
                 //SoundUtil.playSwordConflictSound()
                 print(status)
+                if status == "injured" {
+                    self.statusImageView.backgroundColor = UIColor.red
+                } else if status == "guard" {
+                    self.statusImageView.backgroundColor = UIColor.blue
+                } else if status == "conflict" {
+                    self.statusImageView.backgroundColor = UIColor.white
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.statusImageView.backgroundColor = UIColor.black
+                }
                 return
             },
             result_hook : {
@@ -90,7 +99,8 @@ class chambaraViewController: UIViewController {
         if dispImageNo > 3 {
             self.timer?.invalidate()
             self.timer = nil
-            self.statusImageView.isHidden = true
+            self.statusImageView.backgroundColor = UIColor.black
+            self.statusImageView.image = nil
             return
         }
         
