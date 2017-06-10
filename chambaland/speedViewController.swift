@@ -1,5 +1,5 @@
 //
-//  chambaraViewController.swift
+//  speedViewController.swift
 //  chambaland
 //
 //  Created by 西村　綾乃 on 2017/06/10.
@@ -9,10 +9,11 @@
 import UIKit
 import SocketIO
 
-class chambaraViewController: UIViewController {
+class speedViewController: UIViewController {
     var bs:BattleSystem? = nil
     var timer: Timer? = nil
     var dispImageNo = 0
+    var fireTime: String = ""
     @IBOutlet weak var waitImage: UIImageView!
     @IBOutlet weak var statusImageView: UIImageView!
     
@@ -21,45 +22,35 @@ class chambaraViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.bs = BattleSystem(
             user_id : getRandomStringWithLength(length: 32),
-            mode: "chambara",
+            mode: "speed",
             start_hook : {
                 (date: String) -> (Void) in
                 print("start")
+                print(date)
+                self.fireTime = date
                 self.waitImage.isHidden = true
-
-                self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+                self.statusImageView.backgroundColor = UIColor.black
+                
+                self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
                 
                 return
-            },
+        },
             status_hook : {
                 (status: String) -> (Void) in
-                print(self.bs?.user_id)
-                //SoundUtil.playSwordConflictSound()
-                print(status)
-                if status == "injured" {
-                    self.statusImageView.backgroundColor = UIColor.red
-                } else if status == "guard" {
-                    self.statusImageView.backgroundColor = UIColor.blue
-                } else if status == "conflict" {
-                    self.statusImageView.backgroundColor = UIColor.white
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.statusImageView.backgroundColor = UIColor.black
-                }
                 return
-            },
+        },
             result_hook : {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
                 ActionUtil.finishOffAccelerometer()
                 SoundUtil.playStopSound()
-                self.performSegue(withIdentifier: "resultSegue", sender: result)
+                self.performSegue(withIdentifier: "speedResultSegue", sender: result)
                 return
-            }
+        }
         );
         
-
+        
         
     }
     
@@ -74,7 +65,7 @@ class chambaraViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "resultSegue" {
+        if segue.identifier == "speedResultSegue" {
             let resultViewController = segue.destination as! resultViewController
             resultViewController.result = sender as! Bool
         }
@@ -82,9 +73,24 @@ class chambaraViewController: UIViewController {
     
     func onTimer(timer: Timer) {
         print("onTimer")
+        let now = currentTimeMillis()
+        print(now)
+        print(self.fireTime)
         
-        // 表示している画像の番号を元に画像を表示する
-        displayImage()
+        if (Int(now) > Int(self.fireTime)!){
+            self.timer?.invalidate()
+            self.timer = nil
+            SoundUtil.playStartSound()
+            if self.bs != nil {
+                ActionUtil.additionalViewDidLoad(bs: self.bs!, mode: "speed")
+            }
+            return
+        }
+    }
+    
+    func currentTimeMillis() -> Int64{
+        let nowDouble = NSDate().timeIntervalSince1970
+        return Int64(nowDouble*1000)
     }
     
     func displayImage() {
@@ -93,7 +99,7 @@ class chambaraViewController: UIViewController {
             "count2",
             "count1",
             "countGo"
-            ]
+        ]
         if dispImageNo > 3 {
             self.timer?.invalidate()
             self.timer = nil
@@ -101,7 +107,7 @@ class chambaraViewController: UIViewController {
             self.statusImageView.image = nil
             SoundUtil.playStartSound()
             if self.bs != nil {
-                ActionUtil.additionalViewDidLoad(bs: self.bs!, mode: "chambara")
+                ActionUtil.additionalViewDidLoad(bs: self.bs!, mode: "speed")
             }
             return
         }

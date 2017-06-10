@@ -59,6 +59,8 @@
 		7EBED4691EEC8A3C00FA2CB5 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4591EEC8A3C00FA2CB5 /* Icon-App-76x76@2x.png */; };
 		7EBED46A1EEC8A3C00FA2CB5 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED45A1EEC8A3C00FA2CB5 /* Icon-App-83.5x83.5@2x.png */; };
 		7EBED46B1EEC8A3C00FA2CB5 /* Icon-App-1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED45B1EEC8A3C00FA2CB5 /* Icon-App-1024x1024.png */; };
+		7EBED46F1EEC8EFF00FA2CB5 /* speedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED46E1EEC8EFF00FA2CB5 /* speedViewController.swift */; };
+		7EBED4791EECB50900FA2CB5 /* cheer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4781EECB50900FA2CB5 /* cheer.mp3 */; };
 		F54C3A21249DD068EAE01BF0 /* Pods_chambalandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234EBDA3C2C3D3816C644082 /* Pods_chambalandTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,8 @@
 		7EBED4591EEC8A3C00FA2CB5 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@2x.png"; path = "icons/Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
 		7EBED45A1EEC8A3C00FA2CB5 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "icons/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		7EBED45B1EEC8A3C00FA2CB5 /* Icon-App-1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-1024x1024.png"; path = "icons/Icon-App-1024x1024.png"; sourceTree = "<group>"; };
+		7EBED46E1EEC8EFF00FA2CB5 /* speedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speedViewController.swift; sourceTree = "<group>"; };
+		7EBED4781EECB50900FA2CB5 /* cheer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cheer.mp3; path = sound/cheer.mp3; sourceTree = "<group>"; };
 		82F80A67F5886176832A6FBF /* Pods-chambaland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambaland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambaland/Pods-chambaland.debug.xcconfig"; sourceTree = "<group>"; };
 		A408CE562B4943847A0E2A8E /* Pods-chambalandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambalandTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambalandTests/Pods-chambalandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8E8D4C249471641B6BB5773 /* Pods_chambaland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chambaland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +315,7 @@
 				7EBED3A11EEC2AE400FA2CB5 /* ViewController.swift */,
 				7EBED3D41EEC2EB900FA2CB5 /* chambaraViewController.swift */,
 				7EBED3D61EEC2F1F00FA2CB5 /* resultViewController.swift */,
+				7EBED46E1EEC8EFF00FA2CB5 /* speedViewController.swift */,
 			);
 			name = viewController;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 		7EBED4081EEC3FAE00FA2CB5 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7EBED4781EECB50900FA2CB5 /* cheer.mp3 */,
 				7EBED4411EEC82EA00FA2CB5 /* start.m4a */,
 				7EBED4421EEC82EA00FA2CB5 /* stop.m4a */,
 				7EBED43B1EEC80E300FA2CB5 /* injured1.mp3 */,
@@ -535,6 +541,7 @@
 				7EBED3AA1EEC2AE400FA2CB5 /* LaunchScreen.storyboard in Resources */,
 				7EBED4651EEC8A3C00FA2CB5 /* Icon-App-60x60@1x.png in Resources */,
 				7EBED4141EEC3FD000FA2CB5 /* sword_swing.mp3 in Resources */,
+				7EBED4791EECB50900FA2CB5 /* cheer.mp3 in Resources */,
 				7EBED42A1EEC4FF600FA2CB5 /* countGo.png in Resources */,
 				7EBED4641EEC8A3C00FA2CB5 /* Icon-App-40x40@3x.png in Resources */,
 				7EBED42F1EEC4FF600FA2CB5 /* splash.png in Resources */,
@@ -738,6 +745,7 @@
 				7EBED3FD1EEC3F6500FA2CB5 /* SoundUtil.swift in Sources */,
 				7EBED3A21EEC2AE400FA2CB5 /* ViewController.swift in Sources */,
 				7EBED4161EEC499C00FA2CB5 /* ActionUtil.swift in Sources */,
+				7EBED46F1EEC8EFF00FA2CB5 /* speedViewController.swift in Sources */,
 				7EBED3A01EEC2AE400FA2CB5 /* AppDelegate.swift in Sources */,
 				7EBED3D51EEC2EB900FA2CB5 /* chambaraViewController.swift in Sources */,
 				7EBED3D71EEC2F1F00FA2CB5 /* resultViewController.swift in Sources */,

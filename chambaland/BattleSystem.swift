@@ -11,17 +11,20 @@ import SocketIO
 
 class BattleSystem {
     public var user_id: String
+    public var mode: String
     var socket: SocketIOClient!
-    var start_hook: () -> (Void)
+    var start_hook: (String) -> (Void)
     var status_hook: (String) -> (Void)
     var result_hook : (Bool) -> (Void)
     
     init(user_id:String,
-         start_hook  :  @escaping () -> (Void),
+         mode:String,
+         start_hook  :  @escaping (String) -> (Void),
          status_hook :  @escaping (String) -> (Void),
          result_hook :  @escaping (Bool) -> (Void)
         ) {
         self.user_id = user_id
+        self.mode = mode
         self.start_hook  = start_hook
         self.status_hook = status_hook
         self.result_hook = result_hook
@@ -36,13 +39,13 @@ class BattleSystem {
         
         socket.on(clientEvent: .connect) {data, ack in
             print("socket connected")
-            self.join()
+            self.join(mode: mode)
         }
         
         //socket = appDelegate.socket
         
         socket.on("start"){ data, ack in
-            self.start_hook()
+            self.start_hook("")
             
             self.socket.on("status"){ data, ack in
                 print("status")
@@ -55,6 +58,7 @@ class BattleSystem {
                     case "guard":
                         print("status: \(result)")
                         SoundUtil.playSwordGuardSound()
+                        SoundUtil.vibrate()
                     case "conflict":
                         print("status: \(result)")
                         SoundUtil.playSwordConflictSound()
@@ -77,17 +81,37 @@ class BattleSystem {
             }
         }
         
+        socket.on("speed_start"){ data, ack in
+            self.start_hook(data[0] as! String)
+            
+            self.socket.on("result"){ data, ack in
+                self.socket.off("status")
+                
+                print("result")
+                print(data[0])
+                let json = data[0] as? NSDictionary
+                let result = json?[user_id] as! Bool
+                self.result_hook(result)
+                self.socket.disconnect()
+            }
+        }
+        
         socket.connect()
     }
     
-    func join() {
+    func join(mode: String) {
         print("join")
-        socket.emit("join", user_id)
+        socket.emit("join", ["user_id": user_id, "mode": mode])
     }
     
     func attack() {
         SoundUtil.playSwordSwingSound()
         socket.emit("attack",user_id)
+    }
+    
+    func speed_attack() {
+        SoundUtil.playSwordSwingSound()
+        socket.emit("speed_attack",user_id)
     }
     
     func defence() {
