@@ -40,8 +40,7 @@ class chambaraViewController: UIViewController {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
-                let paramaters = ["score": "20", "result": "true"]
-                self.performSegue(withIdentifier: "resultSegue", sender: 1)
+                self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
         );
@@ -64,7 +63,7 @@ class chambaraViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "resultSegue" {
             let resultViewController = segue.destination as! resultViewController
-            resultViewController.result = sender as! Int
+            resultViewController.result = sender as! Bool
         }
     }
     
