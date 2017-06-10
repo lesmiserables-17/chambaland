@@ -40,6 +40,7 @@ class ActionUtil {
                     print("Guard!")
                     flagGuard = true
                 }
+                
                 if flagCut {
                     bs.attack()
                 }
