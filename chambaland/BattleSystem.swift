@@ -47,6 +47,20 @@ class BattleSystem {
             self.socket.on("status"){ data, ack in
                 print("status")
                 let json = data[0] as? NSDictionary
+                let result = json?[user_id] as! String
+                switch result {
+                    case "injured":
+                        print("status: \(result)")
+                        SoundUtil.playInjuredSound()
+                    case "guard":
+                        print("status: \(result)")
+                        SoundUtil.playSwordGuardSound()
+                    case "conflict":
+                        print("status: \(result)")
+                        SoundUtil.playSwordConflictSound()
+                    default:
+                        print("status: \(result)")
+                }
                 self.status_hook(json?[user_id] as! String)
                 //self.status_hook(data[0] as! String)
             }
@@ -71,6 +85,7 @@ class BattleSystem {
     }
     
     func attack() {
+        SoundUtil.playSwordSwingSound()
         socket.emit("attack",user_id)
     }
     
