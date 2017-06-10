@@ -20,7 +20,6 @@
 		7EBED3D81EEC311700FA2CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3A31EEC2AE400FA2CB5 /* Main.storyboard */; };
 		7EBED3E31EEC333400FA2CB5 /* BattleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3E21EEC333400FA2CB5 /* BattleSystem.swift */; };
 		7EBED3FD1EEC3F6500FA2CB5 /* SoundUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3FC1EEC3F6500FA2CB5 /* SoundUtil.swift */; };
-		7EBED40F1EEC3FD000FA2CB5 /* injured.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4091EEC3FD000FA2CB5 /* injured.mp3 */; };
 		7EBED4101EEC3FD000FA2CB5 /* sword_conflict1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED40A1EEC3FD000FA2CB5 /* sword_conflict1.mp3 */; };
 		7EBED4111EEC3FD000FA2CB5 /* sword_conflict2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED40B1EEC3FD000FA2CB5 /* sword_conflict2.mp3 */; };
 		7EBED4121EEC3FD000FA2CB5 /* sword_conflict3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED40C1EEC3FD000FA2CB5 /* sword_conflict3.mp3 */; };
@@ -40,6 +39,10 @@
 		7EBED42E1EEC4FF600FA2CB5 /* modebtn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4271EEC4FF600FA2CB5 /* modebtn1.png */; };
 		7EBED42F1EEC4FF600FA2CB5 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4281EEC4FF600FA2CB5 /* splash.png */; };
 		7EBED4301EEC4FF600FA2CB5 /* winimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4291EEC4FF600FA2CB5 /* winimg.png */; };
+		7EBED43D1EEC80E300FA2CB5 /* injured1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED43B1EEC80E300FA2CB5 /* injured1.mp3 */; };
+		7EBED43E1EEC80E300FA2CB5 /* injured2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED43C1EEC80E300FA2CB5 /* injured2.mp3 */; };
+		7EBED4431EEC82EA00FA2CB5 /* start.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4411EEC82EA00FA2CB5 /* start.m4a */; };
+		7EBED4441EEC82EA00FA2CB5 /* stop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4421EEC82EA00FA2CB5 /* stop.m4a */; };
 		F54C3A21249DD068EAE01BF0 /* Pods_chambalandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234EBDA3C2C3D3816C644082 /* Pods_chambalandTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +114,6 @@
 		7EBED3EA1EEC37EF00FA2CB5 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		7EBED3F91EEC382900FA2CB5 /* Socket.IO-Client-Swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Socket.IO-Client-Swift"; path = "Pods/Socket.IO-Client-Swift"; sourceTree = "<group>"; };
 		7EBED3FC1EEC3F6500FA2CB5 /* SoundUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundUtil.swift; sourceTree = "<group>"; };
-		7EBED4091EEC3FD000FA2CB5 /* injured.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = injured.mp3; path = sound/injured.mp3; sourceTree = "<group>"; };
 		7EBED40A1EEC3FD000FA2CB5 /* sword_conflict1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sword_conflict1.mp3; path = sound/sword_conflict1.mp3; sourceTree = "<group>"; };
 		7EBED40B1EEC3FD000FA2CB5 /* sword_conflict2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sword_conflict2.mp3; path = sound/sword_conflict2.mp3; sourceTree = "<group>"; };
 		7EBED40C1EEC3FD000FA2CB5 /* sword_conflict3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sword_conflict3.mp3; path = sound/sword_conflict3.mp3; sourceTree = "<group>"; };
@@ -131,6 +133,10 @@
 		7EBED4271EEC4FF600FA2CB5 /* modebtn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modebtn1.png; path = images/modebtn1.png; sourceTree = "<group>"; };
 		7EBED4281EEC4FF600FA2CB5 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = images/splash.png; sourceTree = "<group>"; };
 		7EBED4291EEC4FF600FA2CB5 /* winimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winimg.png; path = images/winimg.png; sourceTree = "<group>"; };
+		7EBED43B1EEC80E300FA2CB5 /* injured1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = injured1.mp3; path = sound/injured1.mp3; sourceTree = "<group>"; };
+		7EBED43C1EEC80E300FA2CB5 /* injured2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = injured2.mp3; path = sound/injured2.mp3; sourceTree = "<group>"; };
+		7EBED4411EEC82EA00FA2CB5 /* start.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = start.m4a; path = sound/start.m4a; sourceTree = "<group>"; };
+		7EBED4421EEC82EA00FA2CB5 /* stop.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = stop.m4a; path = sound/stop.m4a; sourceTree = "<group>"; };
 		82F80A67F5886176832A6FBF /* Pods-chambaland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambaland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambaland/Pods-chambaland.debug.xcconfig"; sourceTree = "<group>"; };
 		A408CE562B4943847A0E2A8E /* Pods-chambalandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambalandTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambalandTests/Pods-chambalandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8E8D4C249471641B6BB5773 /* Pods_chambaland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chambaland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,7 +309,10 @@
 		7EBED4081EEC3FAE00FA2CB5 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7EBED4091EEC3FD000FA2CB5 /* injured.mp3 */,
+				7EBED4411EEC82EA00FA2CB5 /* start.m4a */,
+				7EBED4421EEC82EA00FA2CB5 /* stop.m4a */,
+				7EBED43B1EEC80E300FA2CB5 /* injured1.mp3 */,
+				7EBED43C1EEC80E300FA2CB5 /* injured2.mp3 */,
 				7EBED40A1EEC3FD000FA2CB5 /* sword_conflict1.mp3 */,
 				7EBED40B1EEC3FD000FA2CB5 /* sword_conflict2.mp3 */,
 				7EBED40C1EEC3FD000FA2CB5 /* sword_conflict3.mp3 */,
@@ -469,16 +478,18 @@
 			files = (
 				7EBED3AA1EEC2AE400FA2CB5 /* LaunchScreen.storyboard in Resources */,
 				7EBED4141EEC3FD000FA2CB5 /* sword_swing.mp3 in Resources */,
-				7EBED40F1EEC3FD000FA2CB5 /* injured.mp3 in Resources */,
 				7EBED42A1EEC4FF600FA2CB5 /* countGo.png in Resources */,
 				7EBED42F1EEC4FF600FA2CB5 /* splash.png in Resources */,
 				7EBED4111EEC3FD000FA2CB5 /* sword_conflict2.mp3 in Resources */,
 				7EBED41C1EEC4ECF00FA2CB5 /* bg.png in Resources */,
 				7EBED4101EEC3FD000FA2CB5 /* sword_conflict1.mp3 in Resources */,
 				7EBED4301EEC4FF600FA2CB5 /* winimg.png in Resources */,
+				7EBED43D1EEC80E300FA2CB5 /* injured1.mp3 in Resources */,
+				7EBED43E1EEC80E300FA2CB5 /* injured2.mp3 in Resources */,
 				7EBED42B1EEC4FF600FA2CB5 /* goTopButton.png in Resources */,
 				7EBED42D1EEC4FF600FA2CB5 /* mode2btn.png in Resources */,
 				7EBED42C1EEC4FF600FA2CB5 /* loseimg.png in Resources */,
+				7EBED4431EEC82EA00FA2CB5 /* start.m4a in Resources */,
 				7EBED4211EEC4FEC00FA2CB5 /* count1.png in Resources */,
 				7EBED4121EEC3FD000FA2CB5 /* sword_conflict3.mp3 in Resources */,
 				7EBED42E1EEC4FF600FA2CB5 /* modebtn1.png in Resources */,
@@ -487,6 +498,7 @@
 				7EBED3D81EEC311700FA2CB5 /* Main.storyboard in Resources */,
 				7EBED4131EEC3FD000FA2CB5 /* sword_guard.mp3 in Resources */,
 				7EBED4221EEC4FEC00FA2CB5 /* count2.png in Resources */,
+				7EBED4441EEC82EA00FA2CB5 /* stop.m4a in Resources */,
 				7EBED41A1EEC4EBD00FA2CB5 /* count3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
