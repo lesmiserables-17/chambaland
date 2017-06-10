@@ -37,7 +37,7 @@ class chambaraViewController: UIViewController {
                 return
             },
             result_hook : {
-                (result: String) -> (Void) in
+                (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
                 let paramaters = ["score": "20", "result": "true"]
