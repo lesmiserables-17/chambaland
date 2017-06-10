@@ -16,7 +16,7 @@ class ActionUtil {
     static let guardThreshold = 0.7
     static let cutThreshold = 1.5
     
-    static func additionalViewDidLoad(bs: BattleSystem) {
+    static func additionalViewDidLoad(bs: BattleSystem, mode: String) {
         // Do any additional setup after loading the view, typically from a nib.
         
         if motionManager.isAccelerometerAvailable {
@@ -41,7 +41,11 @@ class ActionUtil {
                 }
                 
                 if flagCut {
-                    bs.attack()
+                    if mode == "chambara" {
+                        bs.attack()
+                    } else {
+                        bs.speed_attack()
+                    }
                 }
                 if flagGuard {
                     bs.defence()

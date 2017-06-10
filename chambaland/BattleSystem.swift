@@ -90,6 +90,11 @@ class BattleSystem {
         socket.emit("attack",user_id)
     }
     
+    func speed_attack() {
+        SoundUtil.playSwordSwingSound()
+        socket.emit("speed_attack",user_id)
+    }
+    
     func defence() {
         socket.emit("defence",user_id)
     }
