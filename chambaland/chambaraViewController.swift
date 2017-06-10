@@ -11,22 +11,28 @@ import SocketIO
 
 class chambaraViewController: UIViewController {
     var bs:BattleSystem? = nil
+    var timer: Timer? = nil
+    var dispImageNo = 0
     @IBOutlet weak var waitImage: UIImageView!
-    @IBOutlet weak var countImage: UIImageView!
+    @IBOutlet weak var statusImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         self.bs = BattleSystem(
             user_id : getRandomStringWithLength(length: 32),
             start_hook : {
                 () -> (Void) in
                 print("start")
                 self.waitImage.isHidden = true
+
                 if self.bs != nil {
                     ActionUtil.additionalViewDidLoad(bs: self.bs!)
                 }
+
+                self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+                //self.timer?.fire()
+                
                 return
             },
             status_hook : {
@@ -40,8 +46,7 @@ class chambaraViewController: UIViewController {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
-                let paramaters = ["score": "20", "result": "true"]
-                self.performSegue(withIdentifier: "resultSegue", sender: 1)
+                self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
         );
@@ -63,8 +68,36 @@ class chambaraViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "resultSegue" {
             let resultViewController = segue.destination as! resultViewController
-            resultViewController.result = sender as! Int
+            resultViewController.result = sender as! Bool
         }
+    }
+    
+    func onTimer(timer: Timer) {
+        print("onTimer")
+        
+        // 表示している画像の番号を元に画像を表示する
+        displayImage()
+    }
+    
+    func displayImage() {
+        let imageNameArray = [
+            "count3",
+            "count2",
+            "count1",
+            "countGo"
+            ]
+        if dispImageNo > 3 {
+            self.timer?.invalidate()
+            self.timer = nil
+            self.statusImageView.isHidden = true
+            return
+        }
+        
+        let name = imageNameArray[dispImageNo]
+        let image = UIImage(named: name)
+        self.statusImageView.image = image
+        
+        dispImageNo += 1
     }
     
     func getRandomStringWithLength(length: Int) -> String {
