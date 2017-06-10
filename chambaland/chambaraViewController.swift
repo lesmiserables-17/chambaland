@@ -46,6 +46,10 @@ class chambaraViewController: UIViewController {
             }
         );
         
+        if bs != nil {
+           ActionUtil.additionalViewDidLoad(bs: self.bs!)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
