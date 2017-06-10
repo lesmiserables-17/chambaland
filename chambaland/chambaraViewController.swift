@@ -21,8 +21,9 @@ class chambaraViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.bs = BattleSystem(
             user_id : getRandomStringWithLength(length: 32),
+            mode: "chambara",
             start_hook : {
-                () -> (Void) in
+                (date: String) -> (Void) in
                 print("start")
                 self.waitImage.isHidden = true
 

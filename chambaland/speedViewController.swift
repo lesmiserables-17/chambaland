@@ -13,6 +13,7 @@ class speedViewController: UIViewController {
     var bs:BattleSystem? = nil
     var timer: Timer? = nil
     var dispImageNo = 0
+    var fireTime: String = ""
     @IBOutlet weak var waitImage: UIImageView!
     @IBOutlet weak var statusImageView: UIImageView!
     
@@ -21,30 +22,21 @@ class speedViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.bs = BattleSystem(
             user_id : getRandomStringWithLength(length: 32),
+            mode: "speed",
             start_hook : {
-                () -> (Void) in
+                (date: String) -> (Void) in
                 print("start")
+                print(date)
+                self.fireTime = date
                 self.waitImage.isHidden = true
+                self.statusImageView.backgroundColor = UIColor.black
                 
-                self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+                self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
                 
                 return
         },
             status_hook : {
                 (status: String) -> (Void) in
-                print(self.bs?.user_id)
-                //SoundUtil.playSwordConflictSound()
-                print(status)
-                if status == "injured" {
-                    self.statusImageView.backgroundColor = UIColor.red
-                } else if status == "guard" {
-                    self.statusImageView.backgroundColor = UIColor.blue
-                } else if status == "conflict" {
-                    self.statusImageView.backgroundColor = UIColor.white
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.statusImageView.backgroundColor = UIColor.black
-                }
                 return
         },
             result_hook : {
@@ -81,9 +73,24 @@ class speedViewController: UIViewController {
     
     func onTimer(timer: Timer) {
         print("onTimer")
+        let now = currentTimeMillis()
+        print(now)
+        print(self.fireTime)
         
-        // 表示している画像の番号を元に画像を表示する
-        displayImage()
+        if (Int(now) > Int(self.fireTime)!){
+            self.timer?.invalidate()
+            self.timer = nil
+            SoundUtil.playStartSound()
+            if self.bs != nil {
+                ActionUtil.additionalViewDidLoad(bs: self.bs!, mode: "speed")
+            }
+            return
+        }
+    }
+    
+    func currentTimeMillis() -> Int64{
+        let nowDouble = NSDate().timeIntervalSince1970
+        return Int64(nowDouble*1000)
     }
     
     func displayImage() {
