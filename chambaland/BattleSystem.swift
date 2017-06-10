@@ -58,6 +58,7 @@ class BattleSystem {
                     case "guard":
                         print("status: \(result)")
                         SoundUtil.playSwordGuardSound()
+                        SoundUtil.vibrate()
                     case "conflict":
                         print("status: \(result)")
                         SoundUtil.playSwordConflictSound()

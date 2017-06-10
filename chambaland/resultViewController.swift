@@ -16,6 +16,7 @@ class resultViewController: UIViewController {
         super.viewDidLoad()
         if result == true {
             resultView.image = UIImage(named: "winimg.png")
+            SoundUtil.playCheerSound()
         } else {
             resultView.image = UIImage(named: "loseimg.png")
         }

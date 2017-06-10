@@ -59,6 +59,13 @@ class SoundUtil {
         AudioServicesPlaySystemSoundWithCompletion(soundId){}
     }
     
+    class func playCheerSound() {
+        let soundUrl = Bundle.main.url(forResource: "cheer", withExtension: "mp3")! as CFURL
+        var soundId: SystemSoundID = 6
+        AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+        AudioServicesPlaySystemSoundWithCompletion(soundId){}
+    }
+    
     class func playSystemSound() {
         AudioServicesPlaySystemSoundWithCompletion(1000){}
     }
