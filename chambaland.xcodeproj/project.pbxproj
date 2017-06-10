@@ -18,12 +18,7 @@
 		7EBED3D51EEC2EB900FA2CB5 /* chambaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3D41EEC2EB900FA2CB5 /* chambaraViewController.swift */; };
 		7EBED3D71EEC2F1F00FA2CB5 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3D61EEC2F1F00FA2CB5 /* resultViewController.swift */; };
 		7EBED3D81EEC311700FA2CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3A31EEC2AE400FA2CB5 /* Main.storyboard */; };
-		7EBED3DB1EEC31FE00FA2CB5 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3DA1EEC31FE00FA2CB5 /* bg.png */; };
-		7EBED3DD1EEC321100FA2CB5 /* modebtn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3DC1EEC321100FA2CB5 /* modebtn1.png */; };
-		7EBED3DF1EEC321800FA2CB5 /* mode2btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3DE1EEC321800FA2CB5 /* mode2btn.png */; };
-		7EBED3E11EEC324B00FA2CB5 /* goTopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3E01EEC324B00FA2CB5 /* goTopButton.png */; };
 		7EBED3E31EEC333400FA2CB5 /* BattleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3E21EEC333400FA2CB5 /* BattleSystem.swift */; };
-		7EBED3E81EEC36E400FA2CB5 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED3E71EEC36E400FA2CB5 /* alert.png */; };
 		7EBED3FD1EEC3F6500FA2CB5 /* SoundUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED3FC1EEC3F6500FA2CB5 /* SoundUtil.swift */; };
 		7EBED40F1EEC3FD000FA2CB5 /* injured.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4091EEC3FD000FA2CB5 /* injured.mp3 */; };
 		7EBED4101EEC3FD000FA2CB5 /* sword_conflict1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED40A1EEC3FD000FA2CB5 /* sword_conflict1.mp3 */; };
@@ -33,6 +28,18 @@
 		7EBED4141EEC3FD000FA2CB5 /* sword_swing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED40E1EEC3FD000FA2CB5 /* sword_swing.mp3 */; };
 		7EBED4161EEC499C00FA2CB5 /* ActionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED4151EEC499C00FA2CB5 /* ActionUtil.swift */; };
 		7EBED4181EEC49C900FA2CB5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBED4171EEC49C900FA2CB5 /* CoreMotion.framework */; };
+		7EBED41A1EEC4EBD00FA2CB5 /* count3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4191EEC4EBD00FA2CB5 /* count3.png */; };
+		7EBED41C1EEC4ECF00FA2CB5 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED41B1EEC4ECF00FA2CB5 /* bg.png */; };
+		7EBED41E1EEC4FE400FA2CB5 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED41D1EEC4FE400FA2CB5 /* alert.png */; };
+		7EBED4211EEC4FEC00FA2CB5 /* count1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED41F1EEC4FEC00FA2CB5 /* count1.png */; };
+		7EBED4221EEC4FEC00FA2CB5 /* count2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4201EEC4FEC00FA2CB5 /* count2.png */; };
+		7EBED42A1EEC4FF600FA2CB5 /* countGo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4231EEC4FF600FA2CB5 /* countGo.png */; };
+		7EBED42B1EEC4FF600FA2CB5 /* goTopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4241EEC4FF600FA2CB5 /* goTopButton.png */; };
+		7EBED42C1EEC4FF600FA2CB5 /* loseimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4251EEC4FF600FA2CB5 /* loseimg.png */; };
+		7EBED42D1EEC4FF600FA2CB5 /* mode2btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4261EEC4FF600FA2CB5 /* mode2btn.png */; };
+		7EBED42E1EEC4FF600FA2CB5 /* modebtn1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4271EEC4FF600FA2CB5 /* modebtn1.png */; };
+		7EBED42F1EEC4FF600FA2CB5 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4281EEC4FF600FA2CB5 /* splash.png */; };
+		7EBED4301EEC4FF600FA2CB5 /* winimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED4291EEC4FF600FA2CB5 /* winimg.png */; };
 		F54C3A21249DD068EAE01BF0 /* Pods_chambalandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234EBDA3C2C3D3816C644082 /* Pods_chambalandTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,12 +107,7 @@
 		7EBED3C11EEC2AE500FA2CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBED3D41EEC2EB900FA2CB5 /* chambaraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chambaraViewController.swift; sourceTree = "<group>"; };
 		7EBED3D61EEC2F1F00FA2CB5 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
-		7EBED3DA1EEC31FE00FA2CB5 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		7EBED3DC1EEC321100FA2CB5 /* modebtn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modebtn1.png; sourceTree = "<group>"; };
-		7EBED3DE1EEC321800FA2CB5 /* mode2btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mode2btn.png; sourceTree = "<group>"; };
-		7EBED3E01EEC324B00FA2CB5 /* goTopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goTopButton.png; sourceTree = "<group>"; };
 		7EBED3E21EEC333400FA2CB5 /* BattleSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSystem.swift; sourceTree = "<group>"; };
-		7EBED3E71EEC36E400FA2CB5 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
 		7EBED3EA1EEC37EF00FA2CB5 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		7EBED3F91EEC382900FA2CB5 /* Socket.IO-Client-Swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Socket.IO-Client-Swift"; path = "Pods/Socket.IO-Client-Swift"; sourceTree = "<group>"; };
 		7EBED3FC1EEC3F6500FA2CB5 /* SoundUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundUtil.swift; sourceTree = "<group>"; };
@@ -117,6 +119,18 @@
 		7EBED40E1EEC3FD000FA2CB5 /* sword_swing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sword_swing.mp3; path = sound/sword_swing.mp3; sourceTree = "<group>"; };
 		7EBED4151EEC499C00FA2CB5 /* ActionUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionUtil.swift; sourceTree = "<group>"; };
 		7EBED4171EEC49C900FA2CB5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7EBED4191EEC4EBD00FA2CB5 /* count3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = count3.png; path = images/count3.png; sourceTree = "<group>"; };
+		7EBED41B1EEC4ECF00FA2CB5 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = images/bg.png; sourceTree = "<group>"; };
+		7EBED41D1EEC4FE400FA2CB5 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alert.png; path = images/alert.png; sourceTree = "<group>"; };
+		7EBED41F1EEC4FEC00FA2CB5 /* count1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = count1.png; path = images/count1.png; sourceTree = "<group>"; };
+		7EBED4201EEC4FEC00FA2CB5 /* count2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = count2.png; path = images/count2.png; sourceTree = "<group>"; };
+		7EBED4231EEC4FF600FA2CB5 /* countGo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = countGo.png; path = images/countGo.png; sourceTree = "<group>"; };
+		7EBED4241EEC4FF600FA2CB5 /* goTopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = goTopButton.png; path = images/goTopButton.png; sourceTree = "<group>"; };
+		7EBED4251EEC4FF600FA2CB5 /* loseimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loseimg.png; path = images/loseimg.png; sourceTree = "<group>"; };
+		7EBED4261EEC4FF600FA2CB5 /* mode2btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mode2btn.png; path = images/mode2btn.png; sourceTree = "<group>"; };
+		7EBED4271EEC4FF600FA2CB5 /* modebtn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modebtn1.png; path = images/modebtn1.png; sourceTree = "<group>"; };
+		7EBED4281EEC4FF600FA2CB5 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = images/splash.png; sourceTree = "<group>"; };
+		7EBED4291EEC4FF600FA2CB5 /* winimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winimg.png; path = images/winimg.png; sourceTree = "<group>"; };
 		82F80A67F5886176832A6FBF /* Pods-chambaland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambaland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambaland/Pods-chambaland.debug.xcconfig"; sourceTree = "<group>"; };
 		A408CE562B4943847A0E2A8E /* Pods-chambalandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chambalandTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chambalandTests/Pods-chambalandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8E8D4C249471641B6BB5773 /* Pods_chambaland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chambaland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,11 +240,18 @@
 		7EBED3D91EEC31E500FA2CB5 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				7EBED3E71EEC36E400FA2CB5 /* alert.png */,
-				7EBED3E01EEC324B00FA2CB5 /* goTopButton.png */,
-				7EBED3DC1EEC321100FA2CB5 /* modebtn1.png */,
-				7EBED3DE1EEC321800FA2CB5 /* mode2btn.png */,
-				7EBED3DA1EEC31FE00FA2CB5 /* bg.png */,
+				7EBED41F1EEC4FEC00FA2CB5 /* count1.png */,
+				7EBED4201EEC4FEC00FA2CB5 /* count2.png */,
+				7EBED41D1EEC4FE400FA2CB5 /* alert.png */,
+				7EBED41B1EEC4ECF00FA2CB5 /* bg.png */,
+				7EBED4191EEC4EBD00FA2CB5 /* count3.png */,
+				7EBED4231EEC4FF600FA2CB5 /* countGo.png */,
+				7EBED4241EEC4FF600FA2CB5 /* goTopButton.png */,
+				7EBED4251EEC4FF600FA2CB5 /* loseimg.png */,
+				7EBED4261EEC4FF600FA2CB5 /* mode2btn.png */,
+				7EBED4271EEC4FF600FA2CB5 /* modebtn1.png */,
+				7EBED4281EEC4FF600FA2CB5 /* splash.png */,
+				7EBED4291EEC4FF600FA2CB5 /* winimg.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -448,18 +469,25 @@
 			files = (
 				7EBED3AA1EEC2AE400FA2CB5 /* LaunchScreen.storyboard in Resources */,
 				7EBED4141EEC3FD000FA2CB5 /* sword_swing.mp3 in Resources */,
-				7EBED3DD1EEC321100FA2CB5 /* modebtn1.png in Resources */,
 				7EBED40F1EEC3FD000FA2CB5 /* injured.mp3 in Resources */,
+				7EBED42A1EEC4FF600FA2CB5 /* countGo.png in Resources */,
+				7EBED42F1EEC4FF600FA2CB5 /* splash.png in Resources */,
 				7EBED4111EEC3FD000FA2CB5 /* sword_conflict2.mp3 in Resources */,
-				7EBED3DF1EEC321800FA2CB5 /* mode2btn.png in Resources */,
+				7EBED41C1EEC4ECF00FA2CB5 /* bg.png in Resources */,
 				7EBED4101EEC3FD000FA2CB5 /* sword_conflict1.mp3 in Resources */,
-				7EBED3DB1EEC31FE00FA2CB5 /* bg.png in Resources */,
-				7EBED3E81EEC36E400FA2CB5 /* alert.png in Resources */,
+				7EBED4301EEC4FF600FA2CB5 /* winimg.png in Resources */,
+				7EBED42B1EEC4FF600FA2CB5 /* goTopButton.png in Resources */,
+				7EBED42D1EEC4FF600FA2CB5 /* mode2btn.png in Resources */,
+				7EBED42C1EEC4FF600FA2CB5 /* loseimg.png in Resources */,
+				7EBED4211EEC4FEC00FA2CB5 /* count1.png in Resources */,
 				7EBED4121EEC3FD000FA2CB5 /* sword_conflict3.mp3 in Resources */,
-				7EBED3E11EEC324B00FA2CB5 /* goTopButton.png in Resources */,
+				7EBED42E1EEC4FF600FA2CB5 /* modebtn1.png in Resources */,
 				7EBED3A71EEC2AE400FA2CB5 /* Assets.xcassets in Resources */,
+				7EBED41E1EEC4FE400FA2CB5 /* alert.png in Resources */,
 				7EBED3D81EEC311700FA2CB5 /* Main.storyboard in Resources */,
 				7EBED4131EEC3FD000FA2CB5 /* sword_guard.mp3 in Resources */,
+				7EBED4221EEC4FEC00FA2CB5 /* count2.png in Resources */,
+				7EBED41A1EEC4EBD00FA2CB5 /* count3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
