@@ -29,18 +29,25 @@ class ActionUtil {
                 var flagCut = false
                 var flagGuard = false
                 print("x: \(data?.acceleration.x) y: \(data?.acceleration.y) z: \(data?.acceleration.z)")
-                let accelNorm = sqrt(data!.acceleration.x * data!.acceleration.x + data!.acceleration.y * data!.acceleration.y + data!.acceleration.z * data!.acceleration.z)
+                let accelNorm = if data != nil {
+                   sqrt(data!.acceleration.x * data!.acceleration.x + data!.acceleration.y * data!.acceleration.y + data!.acceleration.z * data!.acceleration.z)
+                } else {
+                    0
+                }
                 if accelNorm > self.cutThreshold {
                     print("Cut!")
                     flagCut = true
                 }
                 
-                let accelXAbs = fabs(data!.acceleration.x)
+                let accelXAbs = if data != nil {
+                    fabs(data!.acceleration.x)
+                } else {
+                    0
+                }
                 if accelXAbs > self.guardThreshold && !flagCut {
                     print("Guard!")
                     flagGuard = true
                 }
-                
                 if flagCut {
                     bs.attack()
                 }
