@@ -17,7 +17,6 @@ class SoundUtil {
     
     class func playSwordConflictSound() {
         let soundNum = arc4random_uniform(3) + 1
-        print("sword_conflict\(soundNum)")
         let soundUrl = Bundle.main.url(forResource: "sword_conflict\(soundNum)", withExtension: "mp3")! as CFURL
         var soundId: SystemSoundID = 0
         AudioServicesCreateSystemSoundID(soundUrl, &soundId)
@@ -33,14 +32,28 @@ class SoundUtil {
     
     class func playSwordSwingSound() {
         let soundUrl = Bundle.main.url(forResource: "sword_swing", withExtension: "mp3")! as CFURL
-        var soundId: SystemSoundID = 1
+        var soundId: SystemSoundID = 2
         AudioServicesCreateSystemSoundID(soundUrl, &soundId)
         AudioServicesPlaySystemSoundWithCompletion(soundId){}
     }
     
     class func playInjuredSound() {
         let soundUrl = Bundle.main.url(forResource: "injured", withExtension: "mp3")! as CFURL
-        var soundId: SystemSoundID = 2
+        var soundId: SystemSoundID = 3
+        AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+        AudioServicesPlaySystemSoundWithCompletion(soundId){}
+    }
+    
+    class func playStartSound() {
+        let soundUrl = Bundle.main.url(forResource: "start", withExtension: "m4a")! as CFURL
+        var soundId: SystemSoundID = 4
+        AudioServicesCreateSystemSoundID(soundUrl, &soundId)
+        AudioServicesPlaySystemSoundWithCompletion(soundId){}
+    }
+    
+    class func playStopSound() {
+        let soundUrl = Bundle.main.url(forResource: "stop", withExtension: "m4a")! as CFURL
+        var soundId: SystemSoundID = 5
         AudioServicesCreateSystemSoundID(soundUrl, &soundId)
         AudioServicesPlaySystemSoundWithCompletion(soundId){}
     }
