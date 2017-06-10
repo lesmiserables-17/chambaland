@@ -9,11 +9,16 @@
 import UIKit
 
 class resultViewController: UIViewController {
-    var result: Int = 0
+    var result: Bool = false
     
+    @IBOutlet weak var resultView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(result)
+        if result == true {
+            resultView.image = UIImage(named: "winimg.png")
+        } else {
+            resultView.image = UIImage(named: "loseimg.png")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
