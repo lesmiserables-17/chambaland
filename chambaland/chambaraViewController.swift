@@ -40,13 +40,13 @@ class chambaraViewController: UIViewController {
                 print(self.bs?.user_id)
                 //SoundUtil.playSwordConflictSound()
                 print(status)
-                ActionUtil.finishOffAccelerometer() 
                 return
             },
             result_hook : {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
+                ActionUtil.finishOffAccelerometer() 
                 self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
