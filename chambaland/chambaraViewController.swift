@@ -82,17 +82,18 @@ class chambaraViewController: UIViewController {
             "count1",
             "countGo"
             ]
+        if dispImageNo > 3 {
+            self.timer?.invalidate()
+            self.timer = nil
+            self.statusImageView.isHidden = true
+            return
+        }
+        
         let name = imageNameArray[dispImageNo]
         let image = UIImage(named: name)
         self.statusImageView.image = image
         
         dispImageNo += 1
-        
-        if dispImageNo > 3 {
-            self.timer?.invalidate()
-            self.timer = nil
-            self.statusImageView.isHidden = true
-        }
     }
     
     func getRandomStringWithLength(length: Int) -> String {
