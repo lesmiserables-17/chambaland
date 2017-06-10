@@ -28,7 +28,7 @@ class BattleSystem {
         
         socket = SocketIOClient(
             //socketURL: URL(string: "https://667e425c.ngrok.io")!
-            socketURL: URL(string: "http://172.16.28.81")!
+            socketURL: URL(string: "https://5d1388d4.ngrok.io/")!
             //config: [.log(true), .forcePolling(true)]
             
         )
