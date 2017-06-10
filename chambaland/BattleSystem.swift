@@ -28,6 +28,7 @@ class BattleSystem {
         
         socket = SocketIOClient(
             //socketURL: URL(string: "https://667e425c.ngrok.io")!
+            //socketURL: URL(string: "https://5d1388d4.ngrok.io")!
             socketURL: URL(string: "http://172.16.28.81")!
             //config: [.log(true), .forcePolling(true)]
             
@@ -35,6 +36,7 @@ class BattleSystem {
         
         socket.on(clientEvent: .connect) {data, ack in
             print("socket connected")
+            self.join()
         }
         
         //socket = appDelegate.socket
@@ -64,7 +66,6 @@ class BattleSystem {
     }
     
     func join() {
-        print("join")
         socket.emit("join", user_id)
     }
     
