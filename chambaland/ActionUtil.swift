@@ -13,8 +13,8 @@ class ActionUtil {
     
     // MotionManager
     static let motionManager = CMMotionManager()
-    static let guardThreshold = 0.9
-    static let cutThreshold = 1.8
+    static let guardThreshold = 0.7
+    static let cutThreshold = 1.5
     
     static func additionalViewDidLoad(bs: BattleSystem) {
         // Do any additional setup after loading the view, typically from a nib.
