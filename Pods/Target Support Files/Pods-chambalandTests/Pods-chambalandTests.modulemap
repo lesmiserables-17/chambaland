@@ -1,0 +1,6 @@
+framework module Pods_chambalandTests {
+  umbrella header "Pods-chambalandTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
