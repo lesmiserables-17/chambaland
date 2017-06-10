@@ -66,6 +66,7 @@ class BattleSystem {
     }
     
     func join() {
+        print("join")
         socket.emit("join", user_id)
     }
     
