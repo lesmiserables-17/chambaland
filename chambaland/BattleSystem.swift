@@ -73,6 +73,7 @@ class BattleSystem {
                 let json = data[0] as? NSDictionary
                 let result = json?[user_id] as! Bool
                 self.result_hook(result)
+                self.socket.disconnect()
             }
         }
         
