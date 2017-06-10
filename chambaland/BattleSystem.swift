@@ -77,4 +77,8 @@ class BattleSystem {
     func defence() {
         socket.emit("defence",user_id)
     }
+    
+    func close_connection() {
+        socket.disconnect()
+    }
 }

@@ -46,6 +46,7 @@ class chambaraViewController: UIViewController {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
+                self.bs?.close_connection()
                 self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
