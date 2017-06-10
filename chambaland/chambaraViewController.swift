@@ -42,6 +42,7 @@ class chambaraViewController: UIViewController {
                 return
             }
         );
+        ActionUtil.additionalViewDidLoad(bs: self.bs!)
         
     }
     
