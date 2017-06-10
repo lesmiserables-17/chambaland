@@ -38,7 +38,8 @@ class SoundUtil {
     }
     
     class func playInjuredSound() {
-        let soundUrl = Bundle.main.url(forResource: "injured", withExtension: "mp3")! as CFURL
+        let soundNum = arc4random_uniform(2) + 1
+        let soundUrl = Bundle.main.url(forResource: "injured\(soundNum)", withExtension: "mp3")! as CFURL
         var soundId: SystemSoundID = 3
         AudioServicesCreateSystemSoundID(soundUrl, &soundId)
         AudioServicesPlaySystemSoundWithCompletion(soundId){}

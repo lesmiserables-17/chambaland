@@ -26,10 +26,6 @@ class chambaraViewController: UIViewController {
                 print("start")
                 self.waitImage.isHidden = true
 
-                if self.bs != nil {
-                    ActionUtil.additionalViewDidLoad(bs: self.bs!)
-                }
-
                 self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
                 
                 return
@@ -55,7 +51,8 @@ class chambaraViewController: UIViewController {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
-                ActionUtil.finishOffAccelerometer() 
+                ActionUtil.finishOffAccelerometer()
+                SoundUtil.playStopSound()
                 self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
@@ -101,6 +98,10 @@ class chambaraViewController: UIViewController {
             self.timer = nil
             self.statusImageView.backgroundColor = UIColor.black
             self.statusImageView.image = nil
+            SoundUtil.playStartSound()
+            if self.bs != nil {
+                ActionUtil.additionalViewDidLoad(bs: self.bs!)
+            }
             return
         }
         
