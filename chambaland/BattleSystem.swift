@@ -14,12 +14,12 @@ class BattleSystem {
     var socket: SocketIOClient!
     var start_hook: () -> (Void)
     var status_hook: (String) -> (Void)
-    var result_hook : (String) -> (Void)
+    var result_hook : (Bool) -> (Void)
     
     init(user_id:String,
          start_hook  :  @escaping () -> (Void),
          status_hook :  @escaping (String) -> (Void),
-         result_hook :  @escaping (String) -> (Void)
+         result_hook :  @escaping (Bool) -> (Void)
         ) {
         self.user_id = user_id
         self.start_hook  = start_hook
@@ -55,7 +55,7 @@ class BattleSystem {
                 print("result")
                 print(data[0])
                 let json = data[0] as? NSDictionary
-                let result = String(json?[user_id] as! Int)
+                let result = json?[user_id] as! Bool
                 self.result_hook(result)
             }
         }
