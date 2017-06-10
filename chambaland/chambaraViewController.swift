@@ -23,6 +23,9 @@ class chambaraViewController: UIViewController {
             start_hook : {
                 () -> (Void) in
                 print("start")
+                if self.bs != nil {
+                    ActionUtil.additionalViewDidLoad(bs: self.bs!)
+                }
                 self.waitImage.isHidden = true
                 return
             },
@@ -42,9 +45,6 @@ class chambaraViewController: UIViewController {
                 return
             }
         );
-        if bs != nil {
-            ActionUtil.additionalViewDidLoad(bs: self.bs!)
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
