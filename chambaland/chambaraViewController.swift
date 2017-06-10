@@ -25,7 +25,13 @@ class chambaraViewController: UIViewController {
                 () -> (Void) in
                 print("start")
                 self.waitImage.isHidden = true
+
+                if self.bs != nil {
+                    ActionUtil.additionalViewDidLoad(bs: self.bs!)
+                }
+
                 self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+                
                 return
             },
             status_hook : {
@@ -49,19 +55,19 @@ class chambaraViewController: UIViewController {
                 (result: Bool) -> (Void) in
                 print(self.bs?.user_id)
                 print(result)
+                ActionUtil.finishOffAccelerometer() 
                 self.performSegue(withIdentifier: "resultSegue", sender: result)
                 return
             }
         );
         
-        if bs != nil {
-           ActionUtil.additionalViewDidLoad(bs: self.bs!)
-        }
+
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.bs?.join()
+        //sleep(10)
+        //self.bs?.join()
     }
     
     override func didReceiveMemoryWarning() {
