@@ -52,4 +52,11 @@ class ActionUtil {
             )
         }
     }
+    
+    static func finishOffAccelerometer() {
+        
+        if (motionManager.isAccelerometerActive) {
+            motionManager.stopAccelerometerUpdates()
+        }
+    }    
 }

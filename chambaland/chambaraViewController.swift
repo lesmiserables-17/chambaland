@@ -40,6 +40,7 @@ class chambaraViewController: UIViewController {
                 print(self.bs?.user_id)
                 //SoundUtil.playSwordConflictSound()
                 print(status)
+                ActionUtil.finishOffAccelerometer() 
                 return
             },
             result_hook : {
